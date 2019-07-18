@@ -1,3 +1,3 @@
-Utilizes the Jira API to list your open projects and then displays more info on the selected issue.
+Utilizing the Jira API for various tasks.
 
-Edit the script to add your URL, email, API token, and project name.
+Edit the scripts to add your URL, email, API token, and project name.
