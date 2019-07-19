@@ -40,7 +40,14 @@ for ID in jira.search_issues('key ="' + issueID + '"'):
     desc = str(ID.fields.description) # description
     labels = str(ID.fields.labels) # labels
     due = str(ID.fields.duedate) # due date
+
 # prints all the above info on the selected issue
 print(IDKey, summary, '\n Description: ' + desc, '\n Labels: ' + labels, '\n Due: ' + due)
 
+addcomment = input('Would you like to add a comment to the selected issue? [Y/N]: ')
 
+if addcomment == "Y" or addcomment == "y" or addcomment == "yes":
+    comment = input('Enter new comment: ')
+    newcomment = jira.add_comment(ID, comment)
+else:
+    pass
